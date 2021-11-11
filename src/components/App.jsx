@@ -10,7 +10,7 @@ class App extends Component {
             {title: 'The First and Last Freedom', author: 'Jiddu Krishamurit'},
         ];
         this.state = {
-            bookNumber: 1
+            bookNumber:0
         };
     }
     
