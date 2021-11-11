@@ -1,8 +1,16 @@
 import React from 'react';
+import './TitleBar.css';
 
-function TitleBar(props){
+function TitleBar(props) {
     return (
-        <div> className="row row-space"</div>
-        <div className="col-md-12" style={padding: 0}
+        <div className="row row-space">
+            <div className="col-md-12" style={{padding: 0}}>
+                <div className="titlebar-nav">
+                <h1>dcc Library</h1>
+                </div>
+            </div>
+        </div>        
     )
 }
+
+export default TitleBar; 
