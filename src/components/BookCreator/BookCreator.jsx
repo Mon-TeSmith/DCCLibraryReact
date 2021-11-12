@@ -1,11 +1,10 @@
 import React, {Component} from 'react';
-
 class BookCreator extends Component {
     constructor(props) {
         super(props);
         this.state = {
            name: '',
-           author: '',
+           author: ''
         }
     }
 
@@ -16,17 +15,17 @@ class BookCreator extends Component {
     }
 
     handleSubmit = (event) => {
-        event.preventDefault();
+        this.preventDefault();
             this.props.createBook(this.state)
     }
 
     render() {
         return (
             <form onSubmit={this.handleSubmit}>
-                <label>Book Title</label>
-                <input name="title" onChange={this.handleChange} value={this.state.title} />
+                <label>Book Name</label>
+                <input name="name" onChange={this.handleChange} value={this.state.name} />
                 <label>Author</label>
-                <input name="author" onChange={this.handleCange} value={this.state.author} />
+                <input name="author" onChange={this.handleChange} value={this.state.author} />
                 <button type="submit">Create Book</button>
             </form>
         );

@@ -12,7 +12,6 @@ class App extends Component {
             {title: "Ready Player One", author: "Ernest Cline"},
             {title: 'All the Light We Cannot See', author: 'Anthony Doerr'},
             {title: 'The First and Last Freedom', author: 'Jiddu Krishamurit'},
-          
         ];
         this.state = {
             bookNumber:0
@@ -20,7 +19,6 @@ class App extends Component {
     }
 
     goToNextBook = () => {
-        debugger;
         let tempBookNumber = this.state.bookNumber;
         tempBookNumber++;
         if (tempBookNumber === this.books.length) {
@@ -38,6 +36,7 @@ class App extends Component {
          if(tempBookNumber < 0) {
              tempBookNumber = this.books.length -1;     
          }  
+
          this.setState({
              bookNumber: tempBookNumber
          });
