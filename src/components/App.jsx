@@ -24,6 +24,7 @@ class App extends Component {
         if (tempBookNumber === this.books.length) {
             tempBookNumber = 0;
         }
+
         this.setState({
             bookNumber: tempBookNumber
         });
@@ -51,4 +52,4 @@ class App extends Component {
     }
 }
 
-export default App; 
+export default App;
