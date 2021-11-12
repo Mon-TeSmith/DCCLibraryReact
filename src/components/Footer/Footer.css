@@ -1,9 +1,8 @@
-.footer{
-    margin-bottom: 1rem;
-    padding: 1rem;
-    background-color: gray;
+.footer {
+    background-color: lightblue;
     position: fixed; 
-    bottom: 0;
-    left: 0;
-    width: auto;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 50vh 0 50vh lightblue;
+    margin-top: 2em;
 }

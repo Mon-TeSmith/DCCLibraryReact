@@ -3,6 +3,7 @@ import "./App.css"
 import TitleBar from './TitleBar/TitleBar';
 import BookViewer from './BookViewer/BookViewer';
 import BookCreator from './BookCreator/BookCreator';
+import Footer from "./Footer/Footer";
 
 class App extends Component { 
     constructor(props) {
@@ -34,7 +35,7 @@ class App extends Component {
     goToPreviousBook = () => {
          let tempBookNumber = this.state.bookNumber;
          tempBookNumber--;
-         if(tempBookNumber < 0){
+         if(tempBookNumber < 0) {
              tempBookNumber = this.books.length -1;     
          }  
          this.setState({
@@ -58,6 +59,7 @@ class App extends Component {
                 <TitleBar />
                 <BookViewer book={this.books[this.state.bookNumber]} nextBook={this.goToNextBook} previousBook={this.goToPreviousBook} />
                 <BookCreator createNewBook={this.createBook} />
+                <Footer />
             </div>
         ) 
     }

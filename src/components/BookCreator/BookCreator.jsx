@@ -5,7 +5,7 @@ class BookCreator extends Component {
         super(props);
         this.state = {
            name: "",
-           author: ""
+           author: "",
         }
     }
 
@@ -17,14 +17,14 @@ class BookCreator extends Component {
 
     handleSubmit = (event) => {
         event.preventDefault();
-            this.props.createNewBook(this.state)
+            this.props.createBook(this.state)
     }
 
     render() {
         return (
             <form onSubmit={this.handleSubmit}>
-                <label>Book Name</label>
-                <input name="title" onChange={this.handleChange} value={this.state.title}/>
+                <label>Book Title</label>
+                <input name="title" onChange={this.handleChange} value={this.state.title} />
                 <label>Author</label>
                 <input name="author" onChange={this.handleCange} value={this.state.author} />
                 <button type="submit">Create Book</button>
