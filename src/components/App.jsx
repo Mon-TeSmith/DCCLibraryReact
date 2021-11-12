@@ -3,7 +3,7 @@ import "./App.css"
 import TitleBar from './TitleBar/TitleBar';
 import BookViewer from './BookViewer/BookViewer';
 import BookCreator from './BookCreator/BookCreator';
-import Footer from "./Footer/Footer";
+import Footer from './Footer/Footer';
 
 class App extends Component { 
     constructor(props) {
@@ -53,7 +53,7 @@ class App extends Component {
     }
 
 
-    render(){
+    render() {
         return (
             <div className="container-fluid"> 
                 <TitleBar />

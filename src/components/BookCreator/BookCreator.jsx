@@ -4,8 +4,8 @@ class BookCreator extends Component {
     constructor(props) {
         super(props);
         this.state = {
-           name: "",
-           author: "",
+           name: '',
+           author: '',
         }
     }
 
