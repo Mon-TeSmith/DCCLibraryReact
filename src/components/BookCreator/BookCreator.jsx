@@ -17,14 +17,14 @@ class BookCreator extends Component {
 
     handleSubmit = (event) => {
         event.preventDefault();
-        console.log(this.state);
+            this.props.createNewBook(this.state)
     }
 
     render() {
         return (
             <form onSubmit={this.handleSubmit}>
                 <label>Book Name</label>
-                <input name="name" onChange={this.handleChange} value={this.state.name}/>
+                <input name="title" onChange={this.handleChange} value={this.state.title}/>
                 <label>Author</label>
                 <input name="author" onChange={this.handleCange} value={this.state.author} />
                 <button type="submit">Create Book</button>

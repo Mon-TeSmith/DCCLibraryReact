@@ -11,6 +11,7 @@ class App extends Component {
             {title: "Ready Player One", author: "Ernest Cline"},
             {title: 'All the Light We Cannot See', author: 'Anthony Doerr'},
             {title: 'The First and Last Freedom', author: 'Jiddu Krishamurit'},
+          
         ];
         this.state = {
             bookNumber:0
@@ -41,12 +42,22 @@ class App extends Component {
          });
     }
     
+    createBook = (newBook) => {
+        console.log('From the createBook on App component', newBook);
+        this.book.push(newBook);
+        this.setState ({
+            bookNumber: this.books.length - 1
+        })
+
+    }
+
+
     render(){
         return (
             <div className="container-fluid"> 
                 <TitleBar />
                 <BookViewer book={this.books[this.state.bookNumber]} nextBook={this.goToNextBook} previousBook={this.goToPreviousBook} />
-                <BookCreator />
+                <BookCreator createNewBook={this.createBook} />
             </div>
         ) 
     }
